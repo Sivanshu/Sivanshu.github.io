@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Disappearing tweet</title>
+
+	<link rel="stylesheet" type="text/css" href="a1.css">
+</head>
+
+<body>
+	<h1>Disappearing Tweet</h1>
+	
+	<div id="q">
+<div id="j">
+<label for="a" id="f">What's on your mind</label><br>
+<textarea name="a" rows="10" cols="50" id="p" required></textarea><br>
+</div>
+<div id="w">
+<label for="b">Enter date</label>
+<input type="date" name="b" min="" id="d" value="">
+</div>
+<div id="r">
+<button name="" value=""  id="h" onclick="f()">Submit</button>
+</div>
+</div>
+
+<div id="a1">
+	<p id="s">Your tweet:</p>
+<p id="e"></p>
+</div>
+
+<div id="id">
+<p>Your tweet will disappear on:</p>
+<p id="d1"></p>
+</div>
+
+<script type="text/javascript">
+
+document.getElementById('d').min = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split("T")[0];	
+
+
+function f(){
+var a = document.getElementById("p").value;
+document.getElementById("e").innerHTML = a;
+
+var b =document.getElementById("d").value;
+document.getElementById("d1").innerHTML = b;
+}
+
+
+
+
+</script>
+</body>
+</html>
